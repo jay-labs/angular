@@ -70,39 +70,67 @@ $0.value
 ** Property values however can change
 Why property binding?
 Interpolation works only with string values. There a changes we may need to bind boolean values.
-
+<pre>
 <input [id] = "myId" value="Jay" type="text">
 <input id = "{{myId}}" value="Jay" type="text">
 <input disabled="false" id = "{{myId}}" value="Jay" type="text">
 <input [disabled]="isDisabled" id = "{{myId}}" value="Jay" type="text">
 <input bind-disabled="isDisabled" id = "{{myId}}" value="Jay" type="text">
-
+</pre>
 Class Binding
 =============
-<h2 class="text-success"> Jay</h2>
+<pre><h2 class="text-success"> Jay</h2>
 <h2 [class]="successClass"> Jay</h2>
 <h2 class="text-special" [class]="successClass"> Jay</h2>
 <h2 [class.text-danger]="hasError" > Jay</h2>
 <h2 [ngClass]="messageClasses"> Jay</h2>
-
+</pre>
 Style Binding
 ============
-<h2 [style.color]="hasError ? 'red' : 'green'">Style Binding1</h2>
+<pre><h2 [style.color]="hasError ? 'red' : 'green'">Style Binding1</h2>
 <h2 [style.color]="highlightColor">Style Binding2</h2>
 <h2 [ngStyle]="titleStyles">Style Binding3</h2>
-
+</pre>
 Event Binding
 =============
-<Button (click) ="onClick($event)"> Greet </Button>
+<pre><Button (click) ="onClick($event)"> Greet </Button>
 <Button (click) ="greeting='Welcome Jay'"> Greet </Button>
 <h1> Template Reference Variables: </h1>
 <input #myInput type="text">
 <Button (click) ="logMessage(myInput.value)"> Log </Button>
-
+</pre>
 Two Way Binding
 ===============
 Forms Module to be imported in app modules.
 [[ngModel)] = Banana in the box
+Structural Directives
+====================
+ngIf, ngSwitch, ngFor
 
+ngIf
+----
+<h2 *ngIf="true"> Display </h2> -- If statement
+
+Inline syntax:
+<h2 "ngIf="display; else elseBlock"> Display If </h2>  -- If Else statement, elseBlock is templateVariable
+<ng-template #elseBlock>
+<h2> Else Block</h2>
+</ng-template>
+
+Multi line syntax:
+  <div *ngIf="displayName; then thenBlock else elseBlock"> 
+  </div>
+
+  <ng-template #thenBlock>
+    Then Block
+  </ng-template>
+  
+  <ng-template #elseBlock>
+    Else Block
+  </ng-template>
+
+ngSwitch
+--------
+[ngSwitch], *ngSwitchCase, *ngSwitchDefault
 </PRE>
 
