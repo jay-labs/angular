@@ -3,7 +3,8 @@ Angular sample applications/demo
 Followed the below youtube channel and created the samples
 https://www.youtube.com/watch?v=0eWrpsCLMJQ&list=PLC3y8-rFHvwhBRAgFinJR8KHIrCdTkZcZ
 
-History
+<PRE>
+  History
 =======
 2010 - Angular Js
 2016 - Angular 2
@@ -102,3 +103,6 @@ Two Way Binding
 ===============
 Forms Module to be imported in app modules.
 [[ngModel)] = Banana in the box
+
+</PRE>
+
