@@ -77,6 +77,7 @@ Interpolation works only with string values. There a changes we may need to bind
 <input [disabled]="isDisabled" id = "{{myId}}" value="Jay" type="text">
 <input bind-disabled="isDisabled" id = "{{myId}}" value="Jay" type="text">
 </pre>
+
 Class Binding
 =============
 <pre><h2 class="text-success"> Jay</h2>
@@ -85,12 +86,14 @@ Class Binding
 <h2 [class.text-danger]="hasError" > Jay</h2>
 <h2 [ngClass]="messageClasses"> Jay</h2>
 </pre>
+
 Style Binding
 ============
 <pre><h2 [style.color]="hasError ? 'red' : 'green'">Style Binding1</h2>
 <h2 [style.color]="highlightColor">Style Binding2</h2>
 <h2 [ngStyle]="titleStyles">Style Binding3</h2>
 </pre>
+
 Event Binding
 =============
 <pre><Button (click) ="onClick($event)"> Greet </Button>
@@ -99,10 +102,12 @@ Event Binding
 <input #myInput type="text">
 <Button (click) ="logMessage(myInput.value)"> Log </Button>
 </pre>
+
 Two Way Binding
 ===============
 Forms Module to be imported in app modules.
 [[ngModel)] = Banana in the box
+
 Structural Directives
 ====================
 ngIf, ngSwitch, ngFor
